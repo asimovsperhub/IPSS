@@ -1,0 +1,373 @@
+<!DOCTYPE html>
+<html>
+
+	<head>
+		<meta charset="UTF-8">
+		<meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no" />
+		<title>首页</title>
+		{% load static  %}
+		<link rel="stylesheet" type="text/css" href="{% static  'css/style.css' %}" />
+		<link rel="stylesheet" type="text/css" href="{% static  'css/index.css' %}" />
+		<link rel="stylesheet" type="text/css" href="{% static  'css/swiper.css' %}" />
+		<script src="{% static  'js/jquery-3.2.1.min.js' %}" type="text/javascript" charset="utf-8"></script>
+	</head>
+
+	<body>
+		<div class="top">
+			<div class="top_nav">
+				<a href="index.html" class="logo"><img src="{% static 'img/logo.png' %}" /></a>
+				<div class="moment">
+					<div class="bloom">
+						<a href="" class="female">Home</a>
+						<a href="/Blod/">Bold</a>
+						<a href="">Mainnet</a>
+						<a href="">Community</a>
+						<a href="">Download</a>
+
+						<img src="{% static 'img/tls.png' %}" class="leamed" />
+					</div>
+				</div>
+				<img src="{% static 'img/tm.png' %}" class="flashed" />
+			</div>
+			<div class="expend">
+				<p>A decentralized data storage and delivery platform for developers that value affordability, speed, and privacy</p>
+				<div class="plantd">
+					<a href="">white paper</a>
+				</div>
+			</div>
+		</div>
+
+		<!--banner图-->
+		<div class="avenge">
+			<!--<div class="swiper-container">
+				<div class="swiper-wrapper">
+					<div class="swiper-slide">
+						<img src="static/img/banner.png" />
+					</div>
+					<div class="swiper-slide">
+						<img src="static/img/banner.png" />
+					</div>
+					<div class="swiper-slide">
+						<img src="static/img/banner.png" />
+					</div>
+
+				</div>
+
+				<div class="swiper-pagination"></div>
+			</div>-->
+		<!--	gif图		-->
+<!--			<img src="https://timgsa.baidu.com/timg?image&quality=80&size=b9999_10000&sec=1571662946060&di=85efdb883368dc62dbe421aa66758fe5&imgtype=0&src=http%3A%2F%2F5b0988e595225.cdn.sohucs.com%2Fimages%2F20171208%2F2611a9f3490e4ab898a1318170626735.gif" />-->
+			{% load static %}
+			{% for photo  in  photos %}
+		<!-- gif图 -->
+			<a href="{{ photo.href }}" title="{{ photo.title }}">
+			<img  src="/{{ photo.src }}">
+			</a>
+			{% endfor %}
+
+		</div>
+
+		<!--Features-->
+		<div class="wipe">
+			<p class="wipe_n">Features</p>
+			<div class="deepd">
+				<div class="road">
+					<span class="road_l"><img src="{% static 'img/sp1.png' %}"/></span>
+					<div class="road_r">
+						<span>Smart Contract</span>
+						<p>Smart contract enables you to build your own decentralized applications.</p>
+					</div>
+				</div>
+				<div class="road">
+					<span class="road_l"><img src="{% static 'img/sp2.png' %}"/></span>
+					<div class="road_r">
+						<span>Smart Contract</span>
+						<p>Smart contract enables you to build your own decentralized applications.</p>
+					</div>
+				</div>
+				<div class="road">
+					<span class="road_l"><img src="{% static 'img/sp3.png' %}"/></span>
+					<div class="road_r">
+						<span>Smart Contract</span>
+						<p>Smart contract enables you to build your own decentralized applications.</p>
+					</div>
+				</div>
+			</div>
+		</div>
+
+		<!--Application Scenarios-->
+		<div class="negated">
+			<p class="wipe_n">Application Scenarios</p>
+			<ul class="denty">
+				<li class="matter">
+					<a>
+						<span class="tter_l"><img src="{% static 'img/al1.png'  %}"/></span>
+						<div class="tter_r">
+							<p class="arrived">Decentralized Apps</p>
+							<p class="wicked">Your smart contracts or other decentralized application data on the blockchain can be stored on external storage by utilizing PPIO’s APIs.</p>
+						</div>
+					</a>
+				</li>
+				<li class="matter">
+					<a>
+						<span class="tter_l"><img src="{% static 'img/al2.png' %}"/></span>
+						<div class="tter_r">
+							<p class="arrived">Decentralized Apps</p>
+							<p class="wicked">Your smart contracts or other decentralized application data on the blockchain can be stored on external storage by utilizing PPIO’s APIs.</p>
+						</div>
+					</a>
+				</li>
+				<li class="matter">
+					<a>
+						<span class="tter_l"><img src="{% static 'img/al3.png' %}"/></span>
+						<div class="tter_r">
+							<p class="arrived">Decentralized Apps</p>
+							<p class="wicked">Your smart contracts or other decentralized application data on the blockchain can be stored on external storage by utilizing PPIO’s APIs.</p>
+						</div>
+					</a>
+				</li>
+				<li class="matter">
+					<a>
+						<span class="tter_l"><img src="{% static 'img/al4.png'  %}"/></span>
+						<div class="tter_r">
+							<p class="arrived">Decentralized Apps</p>
+							<p class="wicked">Your smart contracts or other decentralized application data on the blockchain can be stored on external storage by utilizing PPIO’s APIs.</p>
+						</div>
+					</a>
+				</li>
+				<li class="matter">
+					<a>
+						<span class="tter_l"><img src="{% static 'img/al5.png' %}"/></span>
+						<div class="tter_r">
+							<p class="arrived">Decentralized Apps</p>
+							<p class="wicked">Your smart contracts or other decentralized application data on the blockchain can be stored on external storage by utilizing PPIO’s APIs.</p>
+						</div>
+					</a>
+				</li>
+				<li class="matter">
+					<a>
+						<span class="tter_l"><img src="{% static 'img/al6.png' %}"/></span>
+						<div class="tter_r">
+							<p class="arrived">Decentralized Apps</p>
+							<p class="wicked">Your smart contracts or other decentralized application data on the blockchain can be stored on external storage by utilizing PPIO’s APIs.</p>
+						</div>
+					</a>
+				</li>
+			</ul>
+		</div>
+
+		<!--Dowload-->
+		<div class="thand">
+			<p class="wipe_n">Dowload</p>
+
+			<div class="liken">
+				<span class="trained">Windows</span>
+				<span>LINUX</span>
+				<span>Android Wallet</span>
+			</div>
+			<div class="gourd">
+
+				<!--下载1 Windows-->
+				<div class="contrast ratio">
+					<div class="calabash ">
+						<div class="calabash ">
+
+						{% load static %}
+						{% for  file   in  files %}
+							{% if  file.file_type == 0 %}
+									{% load %}
+									<a href="/download/?filename={{ file.filename }}">
+									<span>{{ file.filename }}</span>
+									<p><img src="{% static 'img/cv.png' %}" /></p>
+									</a>
+
+							{% endif %}
+						{% endfor %}
+
+					</div>
+
+					</div>
+				</div>
+
+				<!--下载2 Linux-->
+				<div class="contrast ">
+					<div class="calabash ">
+
+						{% load static %}
+						{% for  file   in  files %}
+							{% if  file.file_type == 1 %}
+									{% load %}
+									<a href="/download/?filename={{ file.filename }}">
+									<span>{{ file.filename }}</span>
+									<p><img src="{% static 'img/cv.png' %}" /></p>
+									</a>
+
+							{% endif %}
+						{% endfor %}
+
+					</div>
+
+				</div>
+
+				<!--下载3 Android-->
+				<div class="contrast ">
+					<div class="calabash ">
+						<div class="calabash ">
+
+						{% load static %}
+						{% for  file   in  files %}
+							{% if  file.file_type == 2 %}
+									{% load %}
+									<a href="/download/?filename={{ file.filename }}">
+									<span>{{ file.filename }}</span>
+									<p><img src="{% static 'img/cv.png' %}" /></p>
+									</a>
+
+							{% endif %}
+						{% endfor %}
+
+					</div>
+
+
+				</div>
+
+			</div>
+
+		</div>
+
+		<div class="lamp">
+			<p class="lamp_t">Contact Us</p>
+			<p class="lantern">Chat with the team on Discord</p>
+			<a href="" class="electric">Join Our Discord</a>
+			<p class="alcohol">Subscription</p>
+			<p class="lantern">Feel free to subscribe</p>
+			<div class="blowlamp">
+				<form action="/index/" method="POST">
+					{% csrf_token %}
+					<!--	邮箱验证			-->
+				    <input type="text" name="email" id="order_input" value="" />
+						{{ mess }}
+<!--					<input type="submit">Order <img src="static/img/rjt.png"/>-->
+					<button>Order <img src="{% static 'img/rjt.png' %}"/></button>
+				</form>
+			</div>
+			<div class="pierced">
+				<img src="{% static 'img/lh.png'  %}" />
+			</div>
+
+		</div>
+
+		<div class="rushed">
+			<div class="rushed_r cleverhd">
+				<a href=""><img src="{% static 'img/bm2.png' %}" /></a>
+				<a href=""><img src="{% static 'img/bm3.png' %}" /></a>
+				<a href=""><img src="{% static 'img/bm4.png' %}" /></a>
+				<a href=""><img src="{% static 'img/bm5.png' %}" /></a>
+				<a href=""><img src="{% static 'img/bm6.png' %}" /></a>
+			</div>
+			<div class="rushed_l">
+				<img src="{% static 'img/bm1.png' %}" />
+				<span>Copyright© 2019_IPSS,All Rights Reserved.</span>
+			</div>
+			<div class="rushed_r">
+				<a href=""><img src="{% static 'img/bm2.png' %}" /></a>
+				<a href=""><img src="{% static 'img/bm3.png' %}" /></a>
+				<a href=""><img src="{% static 'img/bm4.png' %}" /></a>
+				<a href=""><img src="{% static 'img/bm5.png' %}" /></a>
+				<a href=""><img src="{% static 'img/bm6.png' %}" /></a>
+			</div>
+		</div>
+
+		<script type="text/javascript">
+			$(document).ready(function() {
+				var w = $(window).width();
+				console.log(w)
+				if(w < 750) {
+					var h = $(".swiper-slide img").height();
+					console.log(h)
+					//			 		$(".avenge").css("height",h)
+				}
+			});
+		</script>
+		{% load static  %}
+		<script src="{% static   'js/swiper.js'  %}" type="text/javascript" charset="utf-8"></script>
+		<script type="text/javascript">
+			$(".bloom a").mouseover(function() {
+				$(".bloom a").removeClass("female");
+				$(this).addClass("female")
+			})
+			$(".bloom a").mouseout(function() {
+				$(".bloom a").removeClass("female");
+			})
+			$(".liken span").click(function() {
+				$(".liken span").removeClass("trained");
+				$(this).addClass("trained")
+				var i = $(this).index();
+				console.log()
+				$(".gourd").find(".contrast").removeClass("ratio");
+				$(".gourd").find(".contrast").eq(i).addClass("ratio")
+			})
+			$(".calabash a").mouseover(function() {
+				$(".calabash a img").attr("src", "static/img/cv.png");
+				$(this).find("img").attr("src", "static/img/cm.png")
+			})
+
+			$(".flashed").click(function() {
+				$(".moment").css("display", "block");
+				$(".bloom").addClass("doused")
+			})
+			$(".leamed").click(function() {
+				$(".moment").css("display", "none");
+				$(".bloom").removeClass("doused");
+				//				$(".bloom").addClass("spended")
+			})
+
+			$(".moment").click(function() {
+				$(".moment").hide();
+			});
+			$(".bloom").click(function(event){
+			event.stopPropagation();
+			});
+		</script>
+		<script type="text/javascript">
+			var swiper = new Swiper('.swiper-container', {
+				direction: 'vertical',
+				loop: true,
+				speed: 800,
+				autoplay: {
+					delay: 2500,
+					disableOnInteraction: false,
+				},
+				pagination: {
+					el: '.swiper-pagination',
+					clickable: true,
+				},
+			});
+		</script>
+<!--		<!— 全局js —>-->
+<!--        <script src="/static/js/jquery-3.2.1.min.js"></script>-->
+<!--        <script type="text/javascript" src="/static/js/host.js"></script>-->
+		<!--ajax给后端传email-->
+        <script>
+            function order() {
+            	var data = {}
+                data['email'] = $('#email').val()
+                $.ajax({
+                    type:"POST",
+                    url: /index/,
+                    data:data,
+                    dataType:"json",
+                    success:function (data) {
+                        alert("订阅成功");
+                    },
+                    error: function(data){
+                        alert("订阅失败");
+                    }
+                });
+            }
+        </script>
+
+
+	</body>
+
+</html>
