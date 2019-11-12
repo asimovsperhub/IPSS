@@ -29,7 +29,7 @@ class   EmailRecord(models.Model):
 ##添加代码gif
 class   Photo(models.Model):
     title = models.CharField(max_length=20, verbose_name='轮播图标题')
-    href = models.CharField(max_length=150, verbose_name='图片广告链接')
+    href = models.CharField(max_length=300, verbose_name='图片广告链接')
     ##upload_to图片上传后存储的目录，如果不存在则会自动创建
     src = models.ImageField(upload_to="static/img/banner/", verbose_name='图片')
     position = models.IntegerField(verbose_name='顺序', choices=(
@@ -66,16 +66,20 @@ class Upload(models.Model):
 
 ##后台添加博客数据模型
 
-class Blods(models.Model):
+class Blogs(models.Model):
     ##
-    title = models.CharField(max_length=30, verbose_name='博客标题')
-    header = models.CharField(max_length=50, verbose_name='博客简介')
-    text = models.TextField(verbose_name='博客内容')
+
+    label = models.CharField(max_length=200, verbose_name='博客标签')
+    title = models.CharField(max_length=200, verbose_name='博客标题')
+    header = models.TextField(verbose_name='博客简介')
+    ##upload_to图片上传后存储的目录，如果不存在则会自动创建
+    src = models.ImageField(upload_to="static/img/banner/", verbose_name='图片',default=0)
+    content=models.TextField(verbose_name='博客内容',default=0)
 
     # readcount=models.IntegerField(verbose_name='阅读量')
     class Meta:
         # db_table   指定数据表名称
-        db_table = 'Blods'
+        db_table = 'blogs'
         ##复数
         verbose_name = '添加博客'
         ##复数->单数

@@ -19,7 +19,7 @@
 				<div class="moment">
 					<div class="bloom">
 						<a href="" class="female">Home</a>
-						<a href="/Blod/">Bold</a>
+						<a href="/Blog/">Bold</a>
 						<a href="">Mainnet</a>
 						<a href="">Community</a>
 						<a href="">Download</a>
@@ -60,8 +60,10 @@
 			{% load static %}
 			{% for photo  in  photos %}
 		<!-- gif图 -->
-			<a href="{{ photo.href }}" title="{{ photo.title }}">
-			<img  src="/{{ photo.src }}">
+			<a href=" " title="{{ photo.title }}">
+<!--			<img  src="/{{ photo.src }}">-->
+				<!--图片地址-->
+				<img  src="{{ photo.href }}" />
 			</a>
 			{% endfor %}
 
@@ -242,14 +244,13 @@
 			<p class="alcohol">Subscription</p>
 			<p class="lantern">Feel free to subscribe</p>
 			<div class="blowlamp">
-				<form action="/index/" method="POST">
-					{% csrf_token %}
+<!--				<form action="/index/" method="POST">-->
+<!--					   {% csrf_token %}-->
 					<!--	邮箱验证			-->
-				    <input type="text" name="email" id="order_input" value="" />
-						{{ mess }}
-<!--					<input type="submit">Order <img src="static/img/rjt.png"/>-->
+				    <input type="text" name="emailname" id="email" value="" />
+					<span id="error" style="color: red"></span>
 					<button>Order <img src="{% static 'img/rjt.png' %}"/></button>
-				</form>
+<!--				</form>-->
 			</div>
 			<div class="pierced">
 				<img src="{% static 'img/lh.png'  %}" />
@@ -308,8 +309,8 @@
 				$(".gourd").find(".contrast").eq(i).addClass("ratio")
 			})
 			$(".calabash a").mouseover(function() {
-				$(".calabash a img").attr("src", "static/img/cv.png");
-				$(this).find("img").attr("src", "static/img/cm.png")
+				$(".calabash a img").attr("src", "{% static 'img/cv.png' %}");
+				$(this).find("img").attr("src", "{% static 'img/cm.png' %}")
 			})
 
 			$(".flashed").click(function() {
@@ -349,22 +350,29 @@
 <!--        <script type="text/javascript" src="/static/js/host.js"></script>-->
 		<!--ajax给后端传email-->
         <script>
-            function order() {
-            	var data = {}
-                data['email'] = $('#email').val()
-                $.ajax({
-                    type:"POST",
-                    url: /index/,
-                    data:data,
-                    dataType:"json",
-                    success:function (data) {
-                        alert("订阅成功");
-                    },
-                    error: function(data){
-                        alert("订阅失败");
-                    }
-                });
-            }
+            $(function(){
+            $('#email').blur(function(){
+            //邮箱失去焦点的时候进来
+				$.ajax({
+					'url':' ',
+					'type':'get', //提交的方式
+					'data':{'email':$('#email').val()},
+					'success': function(data){
+						//回调函数，当请求成功自动触发此方法
+
+
+						//data自动接受后台传过来的内容
+						//判断是否订阅
+						if  (data["ret"]==0){
+							$('#error').text('订阅成功')
+							}
+						else{
+							$('#error').text('订阅成功')
+							}
+						}
+						})
+					})
+        		})
         </script>
 
 

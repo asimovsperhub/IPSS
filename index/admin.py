@@ -1,15 +1,15 @@
 from django.contrib import admin
 
 # Register your models here.
-from index.models import Blods, Photo, Upload
+from index.models import Blogs, Photo, Upload
 
 
 ##注册博客后台模型
-class   BlodAdmin(admin.ModelAdmin):
-    list_display = ['id','title','header','text',]
+class   BlogAdmin(admin.ModelAdmin):
+    list_display = ['label','title','header','src','content']
     search_fields = ['title']
     list_filter = ['id']
-admin.site.register(Blods,BlodAdmin)
+admin.site.register(Blogs,BlogAdmin)
 
 ##gif图
 class   PhotoAdmin(admin.ModelAdmin):

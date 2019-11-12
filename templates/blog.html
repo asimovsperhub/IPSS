@@ -48,24 +48,24 @@
 		<div class="wrapper section-list" >
 			{% for blog in  blogs %}
 			<article>
-				<a href="/blog/{{ blog.title }}">
+				<a href="/blog/{{ blog.label }}">
 
 					<div class="cover-img">
-						<img alt=" {{ blog.title }} "
+						<img alt=" {{ blog.label }} "
 							 src="/{{ blog.src }}">
 					</div>
 
 					<div class="date">October 16, 2019</div>
 					<h2 class="title">
-						{{ blog.header }}
+						{{ blog.title }}
 					</h2>
-					<div class="content">
-						<p>
+<!--					<div class="content">-->
+<!--						<p>-->
 
-							{{ blog.text }}
+<!--							{{ blog.content}}-->
 
-						</p>
-					</div>
+<!--						</p>-->
+<!--					</div>-->
 				</a>
 
 
